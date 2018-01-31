@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import './App.css';
+import classes from './App.css';
 import PersonList from '../components/Persons/List/PersonList';
 import NewPerson from '../components/Persons/Add/NewPerson';
+//import WithClass from '../hoc/WithClass';
 
 //import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary';
 
@@ -64,14 +65,14 @@ class App extends Component {
 
 
     return (
-      <div className="App">
+      <div className={classes.App}>
        <h3>T App</h3>
 
        <hr/>
        <NewPerson addValueClick = {this.addValueHandler.bind(this)} />
        
        <hr/>
-       <div className={Styles.personContainer}>
+       <div styles={Styles.personContainer}>
           <PersonList person={this.state.person} personDeleteClick={this.personDeleteHandler.bind(this)}/>
        </div>
       </div>
@@ -79,4 +80,5 @@ class App extends Component {
   }
 }
 
+//export default WithClass(App);
 export default App;

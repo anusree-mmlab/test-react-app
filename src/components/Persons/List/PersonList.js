@@ -1,6 +1,7 @@
 import React from 'react';
 import ErrorBoundary from '../../ErrorBoundary/ErrorBoundary';
 import Person from '../Person/Person';
+import classes from './PersonList.css';
 
 
 const PersonList = (props) => {
@@ -11,8 +12,8 @@ const PersonList = (props) => {
                     age = {person.age} 
                     onClick = {props.personDeleteClick.bind(this, person.id)}
                   >
-                    <p><span className="hobbyLabel">Hobbies Are:</span> 
-                    <span className="hobby">Football, Travelling</span></p>
+                    <p><span className={classes.hobbyLabel}>Hobbies Are:</span> 
+                    <span className={classes.hobby}>Football, Travelling</span></p>
                 </Person></ErrorBoundary>
         } else {
           return  <ErrorBoundary  key={person.id + '-' +index}><Person 
