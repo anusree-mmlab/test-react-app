@@ -10,6 +10,7 @@ const BurgerView = (props) => {
     const ingredientsArr = Object.keys(props.ingredients);
 
     const burgerIngredientArr = ingredientsArr.map((ingredientName, index) => {
+
         const intermediateArr = []
         for( let i = 0; i<props.ingredients[ingredientName]; i++) {
             intermediateArr.push(<BurgerIngredient key={ingredientName +"_"+ i} type={ingredientName} />)

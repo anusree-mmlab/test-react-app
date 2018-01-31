@@ -6,10 +6,10 @@ class Burger extends Component {
     state = {
         ingredients : {
             bunTop : 1,
-            meat:1,
-            cheese : 1,
-            souce:1,
-            salad : 1,
+            meat:0,
+            cheese : 0,
+            souce:0,
+            salad : 0,
             bunBottom : 1,
         }
     }
